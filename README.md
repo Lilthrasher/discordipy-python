@@ -1,6 +1,7 @@
 # Discordi.py
-A simple Python application to compress video files to send without Discord Nitro.
 ![Discordipy](./Discordipy.png)
+
+A simple Python application to compress video files to send without Discord Nitro.
 
 ## Usage
 
