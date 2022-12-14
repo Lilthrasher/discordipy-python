@@ -89,12 +89,10 @@ class App(tkinter.CTk):
     def radiostate():
         match resMethod.get():
             case 1:
-                print(resMethod.get())
                 state.set("disabled")
                 resframe.setres()
                 presetframe.setpreset()
             case 2:
-                print(resMethod.get())
                 state.set("normal")
                 resframe.setres()
                 presetframe.setpreset()
