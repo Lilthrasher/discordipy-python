@@ -297,8 +297,8 @@ class Discordipy:
         concat = ffmpeg.concat(video, audio, v=1, a=1).node
         video_out = concat[0]
         audio_out = concat[1]
-        ffout = ffmpeg.output(video_out, audio_out, outpath.get(), video_bitrate=newRate, audio_bitrate=abitrate, format="mp4", progress="pipe:2")
-        process = ffout.run_async(pipe_stderr=True)
+        ffout = ffmpeg.output(video_out, audio_out, outpath.get(), format="mp4", progress="pipe:2", **{"b:v": newRate}, **{"b:a": abitrate})
+        process = ffout.run_async(pipe_stderr=True, overwrite_output=True)
         Discordipy.consoleout()
 
     def consoleout():
